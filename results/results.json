@@ -1,0 +1,258 @@
+{
+  "environment": {
+    "python": "3.12.3",
+    "machine": "x86_64",
+    "quick": false,
+    "runtime_s": 99.6
+  },
+  "markets": 3,
+  "offline_ndcg10": {
+    "naive model, naive holdout": {
+      "mean": 0.7996165623848558,
+      "min": 0.7936292800509016,
+      "max": 0.8111492754476028
+    },
+    "naive model, point-in-time holdout": {
+      "mean": 0.634283535812931,
+      "min": 0.6051533200285972,
+      "max": 0.6718925421772197
+    },
+    "point-in-time model, point-in-time holdout": {
+      "mean": 0.7422024149450457,
+      "min": 0.7324491373902181,
+      "max": 0.7587862156648465
+    },
+    "production popularity, point-in-time holdout": {
+      "mean": 0.7355762751371314,
+      "min": 0.7255434316096211,
+      "max": 0.7490118917624465
+    }
+  },
+  "online_bookings_per_1000": {
+    "production popularity": {
+      "mean": 450.9133080986881,
+      "min": 388.9665893396592,
+      "max": 524.609438016401
+    },
+    "naive model": {
+      "mean": 385.0690448465146,
+      "min": 309.7749757600366,
+      "max": 483.415935765698
+    },
+    "point-in-time model": {
+      "mean": 503.9605604820611,
+      "min": 438.0915127661608,
+      "max": 584.53063569777
+    },
+    "oracle (true propensity)": {
+      "mean": 540.9604638968177,
+      "min": 476.0685119397883,
+      "max": 625.9581427616483
+    }
+  },
+  "per_market": [
+    {
+      "seed": 0,
+      "rows_logged": 300000,
+      "online_sessions": 3000,
+      "bookings_per_session_logged": 0.33941666666666664,
+      "offline_ndcg10": {
+        "naive model, naive holdout": 0.7936292800509016,
+        "naive model, point-in-time holdout": 0.6258047452329761,
+        "point-in-time model, point-in-time holdout": 0.7353718917800722,
+        "production popularity, point-in-time holdout": 0.7321735020393267
+      },
+      "online_bookings_per_1000": {
+        "production popularity": 439.1638969400042,
+        "naive model": 362.0162230138093,
+        "point-in-time model": 489.2595329822528,
+        "oracle (true propensity)": 520.8547369890167
+      },
+      "top_features": {
+        "naive": {
+          "clicks_today": 0.9021,
+          "ctr": 0.0316,
+          "imps_today": 0.0188,
+          "price_rel": 0.0155,
+          "bookings_today": 0.0112
+        },
+        "point_in_time": {
+          "bookings_7d": 0.8482,
+          "ctr": 0.066,
+          "age_days": 0.0216,
+          "review_score": 0.013,
+          "price_rel": 0.0127
+        }
+      },
+      "power": [
+        {
+          "n": 50,
+          "interleaving": 0.17,
+          "ab_bookings": 0.01,
+          "ab_clicks": 0.06
+        },
+        {
+          "n": 100,
+          "interleaving": 0.43,
+          "ab_bookings": 0.07,
+          "ab_clicks": 0.14
+        },
+        {
+          "n": 250,
+          "interleaving": 0.81,
+          "ab_bookings": 0.07,
+          "ab_clicks": 0.37
+        },
+        {
+          "n": 500,
+          "interleaving": 0.96,
+          "ab_bookings": 0.09,
+          "ab_clicks": 0.81
+        },
+        {
+          "n": 1000,
+          "interleaving": 1.0,
+          "ab_bookings": 0.21,
+          "ab_clicks": 0.99
+        },
+        {
+          "n": 2000,
+          "interleaving": 1.0,
+          "ab_bookings": 0.3,
+          "ab_clicks": 1.0
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "rows_logged": 300000,
+      "online_sessions": 3000,
+      "bookings_per_session_logged": 0.31775,
+      "offline_ndcg10": {
+        "naive model, naive holdout": 0.7940711316560626,
+        "naive model, point-in-time holdout": 0.6051533200285972,
+        "point-in-time model, point-in-time holdout": 0.7324491373902181,
+        "production popularity, point-in-time holdout": 0.7255434316096211
+      },
+      "online_bookings_per_1000": {
+        "production popularity": 388.9665893396592,
+        "naive model": 309.7749757600366,
+        "point-in-time model": 438.0915127661608,
+        "oracle (true propensity)": 476.0685119397883
+      },
+      "top_features": {
+        "naive": {
+          "clicks_today": 0.831,
+          "bookings_today": 0.0851,
+          "ctr": 0.0265,
+          "imps_today": 0.0184,
+          "price_rel": 0.0152
+        },
+        "point_in_time": {
+          "bookings_7d": 0.7186,
+          "ctr": 0.1848,
+          "age_days": 0.0233,
+          "review_score": 0.0155,
+          "price_rel": 0.0136
+        }
+      },
+      "power": null
+    },
+    {
+      "seed": 2,
+      "rows_logged": 300000,
+      "online_sessions": 3000,
+      "bookings_per_session_logged": 0.3958333333333333,
+      "offline_ndcg10": {
+        "naive model, naive holdout": 0.8111492754476028,
+        "naive model, point-in-time holdout": 0.6718925421772197,
+        "point-in-time model, point-in-time holdout": 0.7587862156648465,
+        "production popularity, point-in-time holdout": 0.7490118917624465
+      },
+      "online_bookings_per_1000": {
+        "production popularity": 524.609438016401,
+        "naive model": 483.415935765698,
+        "point-in-time model": 584.53063569777,
+        "oracle (true propensity)": 625.9581427616483
+      },
+      "top_features": {
+        "naive": {
+          "clicks_today": 0.8928,
+          "ctr": 0.0459,
+          "imps_today": 0.0183,
+          "price_rel": 0.0129,
+          "bookings_today": 0.0116
+        },
+        "point_in_time": {
+          "bookings_7d": 0.8823,
+          "ctr": 0.0433,
+          "age_days": 0.018,
+          "review_score": 0.0131,
+          "price_rel": 0.0101
+        }
+      },
+      "power": null
+    }
+  ],
+  "power": [
+    {
+      "n": 50,
+      "interleaving": 0.17,
+      "ab_bookings": 0.01,
+      "ab_clicks": 0.06
+    },
+    {
+      "n": 100,
+      "interleaving": 0.43,
+      "ab_bookings": 0.07,
+      "ab_clicks": 0.14
+    },
+    {
+      "n": 250,
+      "interleaving": 0.81,
+      "ab_bookings": 0.07,
+      "ab_clicks": 0.37
+    },
+    {
+      "n": 500,
+      "interleaving": 0.96,
+      "ab_bookings": 0.09,
+      "ab_clicks": 0.81
+    },
+    {
+      "n": 1000,
+      "interleaving": 1.0,
+      "ab_bookings": 0.21,
+      "ab_clicks": 0.99
+    },
+    {
+      "n": 2000,
+      "interleaving": 1.0,
+      "ab_bookings": 0.3,
+      "ab_clicks": 1.0
+    }
+  ],
+  "coalescing": {
+    "no coalescing": {
+      "backend_calls": 2000,
+      "requests": 2000,
+      "p50_ms": 3.099876499959464,
+      "p99_ms": 3.487704409865273,
+      "wall_s": 0.20012358799999674
+    },
+    "single-flight": {
+      "backend_calls": 598,
+      "requests": 2000,
+      "p50_ms": 3.139559000146619,
+      "p99_ms": 3.6242759199922148,
+      "wall_s": 0.18683903800001644
+    },
+    "single-flight + 50 ms TTL": {
+      "backend_calls": 40,
+      "requests": 2000,
+      "p50_ms": 0.0005450000344353612,
+      "p99_ms": 3.2409215800043967,
+      "wall_s": 0.014059376999966844
+    }
+  }
+}
